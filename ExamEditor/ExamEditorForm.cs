@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ExamEditor
 {
-    public partial class Form1 : Form
+    public partial class ExamEditor : Form
     {
-        public Form1()
+        public ExamEditor()
         {
             InitializeComponent();
         }
