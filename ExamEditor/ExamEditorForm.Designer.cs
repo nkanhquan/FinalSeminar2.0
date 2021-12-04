@@ -45,6 +45,7 @@ namespace ExamEditor
             this.btnQuesEditor.TabIndex = 0;
             this.btnQuesEditor.Text = "Question editor";
             this.btnQuesEditor.UseVisualStyleBackColor = true;
+            this.btnQuesEditor.Click += new System.EventHandler(this.btnQuesEditor_Click);
             // 
             // btnExamEditor
             // 

@@ -1,4 +1,5 @@
 ﻿using ExamEditor.Exam_marker;
+using FinalSeminar;
 using FinalSeminar_ExamBuilder_;
 using System;
 using System.Collections.Generic;
@@ -214,6 +215,14 @@ namespace ExamEditor
             mainForm examEditorForm = new mainForm();
             this.Hide();
             examEditorForm.ShowDialog();
+            this.Show();
+        }
+
+        private void btnQuesEditor_Click(object sender, EventArgs e)
+        {
+            Form1 questionEditorForm = new Form1();
+            this.Hide();
+            questionEditorForm.ShowDialog();
             this.Show();
         }
     }

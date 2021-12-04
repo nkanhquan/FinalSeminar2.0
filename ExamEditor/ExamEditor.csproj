@@ -86,9 +86,13 @@
     <Folder Include="Exam editor\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\C#\FinalSeminar2.0\FinalSeminar%28ExamBuilder%29\FinalSeminar%28ExamBuilder%29.csproj">
+    <ProjectReference Include="..\FinalSeminar%28ExamBuilder%29\FinalSeminar%28ExamBuilder%29.csproj">
       <Project>{d39ee5ba-e10f-4472-9420-1348d214d8e9}</Project>
       <Name>FinalSeminar%28ExamBuilder%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinalSeminar\FinalSeminar.csproj">
+      <Project>{bede37d2-9725-44d8-85a7-b66ccf3fb474}</Project>
+      <Name>FinalSeminar</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

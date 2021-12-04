@@ -109,7 +109,7 @@ namespace FinalSeminar
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            ImportAllTopicQuestion(@"QuestionDatabase");
+            ImportAllTopicQuestion(@"Question Database");
             comboBox1.DataSource = lstTopic;
         }
 
@@ -210,7 +210,7 @@ namespace FinalSeminar
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Output(@"QuestionDatabase");
+            Output(@"Question Database");
         }
     }
 
