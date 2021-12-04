@@ -46,12 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exam marker\StudentAnswer.cs" />
+    <Compile Include="Exam marker\StudentExam.cs" />
     <Compile Include="ExamEditorForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExamEditorForm.Designer.cs">
       <DependentUpon>ExamEditorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MulQuestion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ExamEditorForm.resx">
@@ -78,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Exam editor\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

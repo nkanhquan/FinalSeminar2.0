@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StudentAnswer>
+  <Student>
+    <StudentName>nguyen quoc thu</StudentName>
+    <StudentID>2059044</StudentID>
+  </Student>
+  <Test>
+    <Question>
+      <Topic>Hardware</Topic>
+      <Content>RAM' stand for?</Content>
+      <Answer>Read Access Memory</Answer>
+    </Question>
+    <Question>
+      <Topic>Hardware</Topic>
+      <Content>Devices that accepts data from outside computer and transfer into CPU are called:</Content>
+      <Answer>Input devices</Answer>
+    </Question>
+  </Test>
+</StudentAnswer>
