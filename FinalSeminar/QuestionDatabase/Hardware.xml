@@ -1,0 +1,17 @@
+﻿<Topic name = "Hardware">
+    <Question numAns = "3">
+		<Content>RAM' stand for?</Content>
+        <Answer>Random Access Memory</Answer>
+        <Answer>Read Access Memory</Answer>
+        <Answer>Read Arithmetic Memory</Answer>
+        <Correct>Random Access Memory</Correct>
+    </Question>
+    <Question numAns ="4">
+		<Content>Devices that accepts data from outside computer and transfer into CPU are called:</Content>
+        <Answer>Input devices</Answer>
+        <Answer>Digital devices</Answer>
+        <Answer>Analogue devices</Answer>
+        <Answer>Truth table peripherals</Answer>
+        <Correct>Input devices</Correct>
+    </Question>
+</Topic>

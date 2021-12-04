@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamEditor", "ExamEditor\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalSeminar(ExamBuilder)", "..\..\C#\FinalSeminar2.0\FinalSeminar(ExamBuilder)\FinalSeminar(ExamBuilder).csproj", "{D39EE5BA-E10F-4472-9420-1348D214D8E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalSeminar", "FinalSeminar\FinalSeminar.csproj", "{BEDE37D2-9725-44D8-85A7-B66CCF3FB474}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D39EE5BA-E10F-4472-9420-1348D214D8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D39EE5BA-E10F-4472-9420-1348D214D8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D39EE5BA-E10F-4472-9420-1348D214D8E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEDE37D2-9725-44D8-85A7-B66CCF3FB474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEDE37D2-9725-44D8-85A7-B66CCF3FB474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEDE37D2-9725-44D8-85A7-B66CCF3FB474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEDE37D2-9725-44D8-85A7-B66CCF3FB474}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
