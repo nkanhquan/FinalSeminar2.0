@@ -1,8 +1,10 @@
 ﻿using ExamEditor.Exam_marker;
+using FinalSeminar_ExamBuilder_;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -124,7 +126,10 @@ namespace ExamEditor
                 {
                     filePath = saveFileDlg.FileName;
 
+                    //Export the file
                     ExportResult(filePath);
+                    //Open the file
+                    Process.Start(filePath);
                 }
             }
 
@@ -135,7 +140,7 @@ namespace ExamEditor
         {
             using (StreamWriter sw = File.CreateText(filePath))
             {
-                sw.WriteLine("ID|Name|Number of correct answers");
+                sw.WriteLine("ID|Name|Number of correct answers\n");
                 foreach(var i in lstExam)
                 {
                     sw.WriteLine($"{i.ID}|{i.Name}|{i.NumCorrect}");
@@ -202,6 +207,14 @@ namespace ExamEditor
         private void ExamEditor_Load(object sender, EventArgs e)
         {
             LoadDatabase(@"Question Database");
+        }
+
+        private void btnExamEditor_Click(object sender, EventArgs e)
+        {
+            mainForm examEditorForm = new mainForm();
+            this.Hide();
+            examEditorForm.ShowDialog();
+            this.Show();
         }
     }
 }

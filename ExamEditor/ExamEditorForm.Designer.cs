@@ -55,6 +55,7 @@ namespace ExamEditor
             this.btnExamEditor.TabIndex = 1;
             this.btnExamEditor.Text = "Exam editor";
             this.btnExamEditor.UseVisualStyleBackColor = true;
+            this.btnExamEditor.Click += new System.EventHandler(this.btnExamEditor_Click);
             // 
             // btnExamMarker
             // 
@@ -76,6 +77,7 @@ namespace ExamEditor
             this.Controls.Add(this.btnExamEditor);
             this.Controls.Add(this.btnQuesEditor);
             this.Name = "ExamEditor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exam Editor";
             this.Load += new System.EventHandler(this.ExamEditor_Load);
             this.ResumeLayout(false);
