@@ -17,6 +17,7 @@ namespace FinalSeminar_ExamBuilder_
         private BindingList<MulQuestion> lstQues;
         private Dictionary<string, List<MulQuestion>> quesDb = new Dictionary<string, List<MulQuestion>>();
         private List<string> lstTopic = new List<string>();
+        private string examCode = "";
 
         public mainForm()
         {
@@ -258,6 +259,11 @@ namespace FinalSeminar_ExamBuilder_
                 //Test
                 xml.WriteStartElement("Test");
 
+                //Test Code
+                xml.WriteStartElement("TestCode");
+                xml.WriteValue(examCode);
+                xml.WriteEndElement();
+
                 foreach(var i in lstQues)
                 {
                     //Start of Question
@@ -295,15 +301,21 @@ namespace FinalSeminar_ExamBuilder_
         {
             saveFileDlg.Filter = "|*.xml";
 
-            if(saveFileDlg.ShowDialog() == DialogResult.OK)
+            if (string.IsNullOrEmpty(txtExamCode.Text))
+                MessageBox.Show("Please enter the Exam Code!", "Error", MessageBoxButtons.OK);
+            else
             {
-                string filePath = saveFileDlg.FileName;
+                examCode = txtExamCode.Text;
 
-                ExportExam(filePath);
-                //FileInfo file = new FileInfo(filePath);
-                //string tmp = file.DirectoryName + '\n' + file.Name + '\n' + file.Extension + '\n' + file.FullName;
-                //MessageBox.Show(tmp);
+                if (saveFileDlg.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDlg.FileName;
+
+                    ExportExam(filePath);
+                }
             }
+
+
         }
 
         private void ImportExam(string path)

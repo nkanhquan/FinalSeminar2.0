@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exam marker\ExamComparer.cs" />
     <Compile Include="Exam marker\StudentAnswer.cs" />
     <Compile Include="Exam marker\StudentExam.cs" />
     <Compile Include="ExamEditorForm.cs">

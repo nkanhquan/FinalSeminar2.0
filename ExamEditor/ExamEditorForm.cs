@@ -139,6 +139,8 @@ namespace ExamEditor
 
         private void ExportResult(string filePath)
         {
+            SortListExamDesc();
+
             using (StreamWriter sw = File.CreateText(filePath))
             {
                 sw.WriteLine("ID|Name|Number of correct answers\n");
@@ -148,6 +150,25 @@ namespace ExamEditor
                 }
             }
 
+        }
+
+        public void SortListExamDesc()
+        {
+            //lstExam.Sort(delegate (StudentExam x, StudentExam y) { return x.NumCorrect.CompareTo(y.NumCorrect); });
+
+            //for(int i = 0; i < lstExam.Count; ++i)
+            //    for(int j = i + 1; j < lstExam.Count - 1; ++j)
+            //    {
+            //        if(lstExam[i].NumCorrect < lstExam[j].NumCorrect)
+            //        {
+            //            //Swap
+            //            StudentExam tmp = lstExam[i];
+            //            lstExam[i] = lstExam[j];
+            //            lstExam[j] = tmp;
+            //        }
+            //    }
+
+            lstExam.Sort(new ExamComparer());
         }
 
         private void LoadDatabase(string direct)

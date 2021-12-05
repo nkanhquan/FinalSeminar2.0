@@ -30,7 +30,7 @@ namespace FinalSeminar_ExamBuilder_
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
-            FinalSeminar_ExamBuilder_.MulQuestion mulQuestion2 = new FinalSeminar_ExamBuilder_.MulQuestion();
+            FinalSeminar_ExamBuilder_.MulQuestion mulQuestion1 = new FinalSeminar_ExamBuilder_.MulQuestion();
             this.lbQuestion = new System.Windows.Forms.ListBox();
             this.btnUpArrow = new System.Windows.Forms.Button();
             this.btnDownArrow = new System.Windows.Forms.Button();
@@ -44,6 +44,8 @@ namespace FinalSeminar_ExamBuilder_
             this.openFileDlg = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtExamCode = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbQuestion
@@ -141,11 +143,11 @@ namespace FinalSeminar_ExamBuilder_
             // 
             this.questionCtrl.BackColor = System.Drawing.Color.White;
             this.questionCtrl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            mulQuestion2.Ans = ((System.Collections.Generic.List<string>)(resources.GetObject("mulQuestion2.Ans")));
-            mulQuestion2.CorrectAnswer = null;
-            mulQuestion2.Ques = "";
-            mulQuestion2.Topic = "";
-            this.questionCtrl.Content = mulQuestion2;
+            mulQuestion1.Ans = ((System.Collections.Generic.List<string>)(resources.GetObject("mulQuestion1.Ans")));
+            mulQuestion1.CorrectAnswer = null;
+            mulQuestion1.Ques = "";
+            mulQuestion1.Topic = "";
+            this.questionCtrl.Content = mulQuestion1;
             this.questionCtrl.Location = new System.Drawing.Point(403, 12);
             this.questionCtrl.Name = "questionCtrl";
             this.questionCtrl.Size = new System.Drawing.Size(514, 533);
@@ -165,11 +167,29 @@ namespace FinalSeminar_ExamBuilder_
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1311, 304);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Exam\'s Code";
+            // 
+            // txtExamCode
+            // 
+            this.txtExamCode.Location = new System.Drawing.Point(1304, 324);
+            this.txtExamCode.Name = "txtExamCode";
+            this.txtExamCode.Size = new System.Drawing.Size(100, 22);
+            this.txtExamCode.TabIndex = 13;
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1414, 557);
+            this.Controls.Add(this.txtExamCode);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.questionCtrl);
             this.Controls.Add(this.cbxTopic);
@@ -186,6 +206,7 @@ namespace FinalSeminar_ExamBuilder_
             this.Text = "Exam editor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -204,6 +225,8 @@ namespace FinalSeminar_ExamBuilder_
         private System.Windows.Forms.OpenFileDialog openFileDlg;
         private System.Windows.Forms.SaveFileDialog saveFileDlg;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtExamCode;
     }
 }
 
