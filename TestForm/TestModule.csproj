@@ -68,6 +68,7 @@
     <Compile Include="Answerctrl.Designer.cs">
       <DependentUpon>Answerctrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="StartTime.cs" />
     <Compile Include="Testingform.cs">
       <SubType>Form</SubType>
     </Compile>

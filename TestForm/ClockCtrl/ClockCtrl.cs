@@ -68,7 +68,10 @@ namespace TestForm
                     _ssBegin = 0;
                 else
                 if (value > 60)
-                    _ssBegin = 99;
+                {
+                    _ssBegin = value % 60;
+                    _mmBegin = value / 60;
+                }
                 else
                     _ssBegin = value;
                 ss1.Image = imageList.Images[_ssBegin / 10];

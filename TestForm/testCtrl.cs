@@ -16,14 +16,14 @@ namespace TestForm
         {
             public bool isChange = false;
 
-            public bool isClosed=false;
+            public bool isClosed = false;
             public Label lbAnswer { get; set; }
 
-            public RadioButton rdAnswer { get ; set; }
+            public RadioButton rdAnswer { get; set; }
 
             public RadioAnswer()
             {
-                lbAnswer = new Label() ;
+                lbAnswer = new Label();
                 rdAnswer = new RadioButton();
             }
 
@@ -33,7 +33,7 @@ namespace TestForm
         private MulQuestion content;
         private List<RadioAnswer> lstAnsCtrl = new List<RadioAnswer>();
         private List<int> LstIndex = new List<int>();
-        public int indexChange ;
+        public int indexChange;
         //Properties
         public MulQuestion Content
         {
@@ -58,7 +58,7 @@ namespace TestForm
             }
             set
             {
-                
+
                 content = new MulQuestion(value);
                 //reset radio button  
                 QuestText.Text = content.Ques;
@@ -80,8 +80,8 @@ namespace TestForm
                         {
                             Add_Answer();
                         }
-                        lstAnsCtrl[i].rdAnswer.Text= content.Ans[i];
-                        
+                        lstAnsCtrl[i].rdAnswer.Text = content.Ans[i];
+
                     }
                     //delete answer if the input have enought answer ; 
                     for (int i = content.Ans.Count(); i < lstAnsCtrl.Count; i++)
@@ -90,20 +90,20 @@ namespace TestForm
                         this.Controls.RemoveAt(this.Controls.Count - 1);
                         this.Controls.RemoveAt(this.Controls.Count - 1);
                         UpdateAnswer();
-                         i--;
+                        i--;
                     }
                 }
                 Reset();
                 UpdateAnswer();
             }
-           
+
         }
         public void Reset()
-        {   
-            for(int i=0;i<lstAnsCtrl.Count;i++)
+        {
+            for (int i = 0; i < lstAnsCtrl.Count; i++)
             {
-               
-                if (i==LstIndex[indexChange] )
+
+                if (i == LstIndex[indexChange])
                 {
                     lstAnsCtrl[i].rdAnswer.Checked = true;
                 }
@@ -111,12 +111,12 @@ namespace TestForm
                 {
                     lstAnsCtrl[i].rdAnswer.Checked = false;
                 }
-               
+
             }
         }
         public string Check()
         {
-            for (int i=0;i<lstAnsCtrl.Count;i++)
+            for (int i = 0; i < lstAnsCtrl.Count; i++)
             {
                 if (lstAnsCtrl[i].rdAnswer.Checked == true)
                 {
@@ -124,31 +124,31 @@ namespace TestForm
                 }
             }
             return "";
-                 
+
         }
-        public void  CreateList(int leng)
+        public void CreateList(int leng)
         {
-            for(int i=0;i<leng;i++)
+            for (int i = 0; i < leng; i++)
             {
                 LstIndex.Add(-1);
             }
         }
         public void Changed(int index)
         {
-               //update index
-                for (int i = 0; i < lstAnsCtrl.Count; i++)
+            //update index
+            for (int i = 0; i < lstAnsCtrl.Count; i++)
+            {
+                if (lstAnsCtrl[i].rdAnswer.Checked == true)
                 {
-                    if (lstAnsCtrl[i].rdAnswer.Checked == true)
-                    {
-                        LstIndex[index]=i;
-                        return;
-                    }
+                    LstIndex[index] = i;
+                    return;
                 }
+            }
         }
         //get positon question 
         public void GetIndex(int index)
         {
-            indexChange = index;       
+            indexChange = index;
         }
         void Add_Answer()
         {
@@ -157,7 +157,7 @@ namespace TestForm
             RadioAnswer tmpAnsCtrl = new RadioAnswer();
             if (tmpAnsCtrl != null)
             {
-                Point tmp1= new Point(3, 50 + i * 53);
+                Point tmp1 = new Point(3, 50 + i * 53);
                 Point tmp2 = new Point(120, 50 + i * 53);
                 tmpAnsCtrl.lbAnswer.Location = tmp1;
                 this.Controls.Add(tmpAnsCtrl.lbAnswer);
@@ -165,7 +165,7 @@ namespace TestForm
                 tmpAnsCtrl.rdAnswer.Location = tmp2;
                 this.Controls.Add(tmpAnsCtrl.rdAnswer);
                 lstAnsCtrl.Add(tmpAnsCtrl);
-            } 
+            }
         }
         public void UpdateAnswer()
         {
@@ -174,7 +174,7 @@ namespace TestForm
             {
                 if (lstAnsCtrl[i].isClosed)
                 {
-                    lstAnsCtrl.RemoveAt(i);             
+                    lstAnsCtrl.RemoveAt(i);
                     --i;
                 }
             }
@@ -182,15 +182,15 @@ namespace TestForm
             {
                 lstAnsCtrl[i].lbAnswer.Location = new Point(3, 50 + i * 53);
                 lstAnsCtrl[i].lbAnswer.Text = $"Answer {i + 1}:";
-               
+
             }
 
-           
+
         }
         public string Question
         {
-            get { return QuestText.Text ; }
-            set { QuestText.Text= value; }
+            get { return QuestText.Text; }
+            set { QuestText.Text = value; }
         }
         public TestCtrl()
         {
@@ -223,7 +223,7 @@ namespace TestForm
                 tmpAnsCtrl.rdAnswer.Text = "";
                 this.Controls.Add(tmpAnsCtrl.rdAnswer);
                 lstAnsCtrl.Add(tmpAnsCtrl);
-                
+
             }
         }
         //void Answer_Reset(int index)
@@ -245,7 +245,7 @@ namespace TestForm
         //        }
         //    }
         //}
-        
+
         private void TestCtrl_Load(object sender, EventArgs e)
         {
             Default_setting();

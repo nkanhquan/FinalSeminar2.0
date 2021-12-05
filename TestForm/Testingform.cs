@@ -16,8 +16,10 @@ namespace TestForm
         public Info stuInfo = new Info() ;
         public BindingList<MulQuestion> quesDb = new BindingList<MulQuestion>() ;
         public BindingList<Status> unCheck = new BindingList<Status>();
+        public string testCode="";
+        private string Timebegin="" ;
         private int tmpIndex = 0;
-       
+        private int flag = 0;
         public Testingform()
         {
             InitializeComponent();
@@ -34,15 +36,18 @@ namespace TestForm
             //set Time for clock 
             clockuserCtrl._ss = 15*quesDb.Count;
             clockuserCtrl.Start();
+            //get time
+            Timebegin = DateTime.Now.ToString("dddd, dd MMMM yyyy HH:mm");
+            //enable button start 
             btStart.Enabled = false;
+            Testcodelb.Text = testCode;
+            //
             testCtrl1.GetIndex(0);
             testCtrl1.CreateList(quesDb.Count);  
             listBox1.DataSource = quesDb;
             listBox2.DataSource = unCheck;
-            testCtrl1.Enabled = true;
-          
+            testCtrl1.Enabled = true; 
         }
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //check listbox before change 
@@ -51,7 +56,6 @@ namespace TestForm
             int index = listBox1.SelectedIndex;
             if (index > -1)
             {
-               
                 listBox2.SelectedIndex = index;
                 listBox2.DataSource = null;
                 listBox2.DataSource = unCheck;
@@ -60,12 +64,12 @@ namespace TestForm
                 tmpIndex = index;
             }
         }
-
+    
         private void Form1_Load(object sender, EventArgs e)
         {
            
             testCtrl1.Enabled = false;
-            pictureBox1.Image = imageList1.Images[0];
+            
            
            
         }
@@ -78,9 +82,9 @@ namespace TestForm
 
                 quesDb[index].CorrectAnswer=testCtrl1.Check();
                 testCtrl1.Changed(index);
-                UpdateStatus(index);
-                listBox2.DataSource = null;
-                listBox2.DataSource = unCheck;
+                //UpdateStatus(index);
+                //listBox2.DataSource = null;
+                //listBox2.DataSource = unCheck;
                 if (listBox1.SelectedIndex == listBox1.Items.Count - 1)
                 {                   
                     MessageBox.Show("Out of question ");
@@ -101,10 +105,10 @@ namespace TestForm
 
                 quesDb[index].CorrectAnswer = testCtrl1.Check();
                 testCtrl1.Changed(index);
-                UpdateStatus(index);
-                listBox2.DataSource = null;
-                listBox2.DataSource = unCheck;
-                if (listBox1.SelectedIndex == -1)
+                //UpdateStatus(index);
+                //listBox2.DataSource = null;
+                //listBox2.DataSource = unCheck;
+                if (listBox1.SelectedIndex == 0)
                 {
                     MessageBox.Show("Out of question ");
                     return;
@@ -117,12 +121,20 @@ namespace TestForm
         }
         private void Output()
         {
-            for (int i = 0; i < quesDb.Count(); i++)
+            SaveFileDialog dlg = new SaveFileDialog();
+            // chỉ lưu tập tin dạng .txt
+            dlg.Filter = "Luu tap tin bai thi|*.xml";
+            // hiển thị hộp thoại
+            if (dlg.ShowDialog() == DialogResult.OK)
             {
-                BindingList<MulQuestion> list = quesDb;
-                XmlWriter xml = XmlWriter.Create("TestResult" + ".xml", new XmlWriterSettings() { Indent = true });
+                for (int i = 0; i < quesDb.Count(); i++)
                 {
-                    xml.WriteStartElement("StudentAnswer");
+                    string filePath = dlg.FileName;
+                    BindingList<MulQuestion> list = quesDb;
+                    XmlWriter xml = XmlWriter.Create(filePath, new XmlWriterSettings() { Indent = true });
+                    {
+                        xml.WriteStartElement("StudentAnswer");
+                        //write sutdent info
                         xml.WriteStartElement("Student");
                         xml.WriteStartElement("StudentName");
                         xml.WriteValue(stuInfo.Name);
@@ -131,7 +143,17 @@ namespace TestForm
                         xml.WriteValue(stuInfo.ID);
                         xml.WriteEndElement();
                         xml.WriteEndElement();
+                        //write time start 
+                        xml.WriteStartElement("Time");
+                        xml.WriteValue(Timebegin);
+                        xml.WriteEndElement();
+                        //write test info
                         xml.WriteStartElement("Test");
+                        //write test code
+                        xml.WriteStartElement("TestCode");
+                        xml.WriteValue(testCode);
+                        xml.WriteEndElement();
+                        //write student answer 
                         foreach (var item in list)
                         {
                             xml.WriteStartElement("Question");
@@ -147,13 +169,19 @@ namespace TestForm
                             xml.WriteEndElement();
                         }
                         xml.WriteEndElement();
-                    xml.WriteEndElement();
-                    xml.Close();
+                        xml.WriteEndElement();
+                        xml.Close();
+                    }
                 }
             }
         }
         void UpdateStatus(int index )
-        {       
+        {
+           if(flag==1)
+            {
+                flag = 0;
+                return;
+            }
             if (testCtrl1.Check() == "")
                 unCheck[index].st = "chua lam ";
             else unCheck[index].st = "da lam";
@@ -165,19 +193,20 @@ namespace TestForm
             MessageBox.Show("Submit Success");
             this.Close();
         }
+ 
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void btHighlight_Click(object sender, EventArgs e)
         {
-
+            flag = 1;
+            int index = listBox1.SelectedIndex;
+            unCheck[index].st = "special";
+            listBox2.DataSource = null;
+            listBox2.DataSource = unCheck;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            int index = listBox2.SelectedIndex;
-            if(index >-1)
-            {
-               
-            }
+
         }
     }
 }

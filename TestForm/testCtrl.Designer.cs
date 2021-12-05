@@ -35,18 +35,20 @@
             // Quest
             // 
             this.Quest.AutoSize = true;
+            this.Quest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Quest.Location = new System.Drawing.Point(3, 15);
             this.Quest.Name = "Quest";
-            this.Quest.Size = new System.Drawing.Size(73, 20);
+            this.Quest.Size = new System.Drawing.Size(82, 22);
             this.Quest.TabIndex = 0;
             this.Quest.Text = "Question";
             // 
             // QuestText
             // 
             this.QuestText.AutoSize = true;
-            this.QuestText.Location = new System.Drawing.Point(167, 15);
+            this.QuestText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.QuestText.Location = new System.Drawing.Point(107, 15);
             this.QuestText.Name = "QuestText";
-            this.QuestText.Size = new System.Drawing.Size(51, 20);
+            this.QuestText.Size = new System.Drawing.Size(58, 22);
             this.QuestText.TabIndex = 2;
             this.QuestText.Text = "label1";
             // 

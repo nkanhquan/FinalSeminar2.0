@@ -47,6 +47,11 @@ namespace TestForm
                 {
                     //Read the topic and its name
                     xml.ReadToFollowing("Test");
+                    //read testcode
+                    //xml.ReadToFollowing("TestCode");
+                    //string tmpCode="";
+                    //tmpCode = xml.ReadElementContentAsString();
+                    //f2.testCode = tmpCode;
                     while (xml.ReadToFollowing("Question"))
                     {
                         MulQuestion tmpQues = new MulQuestion();
