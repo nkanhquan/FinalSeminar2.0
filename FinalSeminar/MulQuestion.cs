@@ -15,19 +15,19 @@ namespace FinalSeminar
         private string correctAns;
 
         //Properties
-        public string Ques 
+        public string Ques
         {
             get { return ques; }
-            set { ques = value; } 
+            set { ques = value; }
         }
 
-        public List<string> Ans 
-        { 
+        public List<string> Ans
+        {
             get { return ans; }
             set { ans = new List<string>(value); }
         }
 
-        public string Topic 
+        public string Topic
         {
             get { return tpc; }
             set { tpc = value; }
@@ -48,7 +48,7 @@ namespace FinalSeminar
             tpc = "";
         }
 
-        public MulQuestion(string tmpQues, string tmpTopic , List<string> tmpAns)
+        public MulQuestion(string tmpQues, string tmpTopic, List<string> tmpAns)
         {
             ques = tmpQues;
             ans = new List<string>(tmpAns);
