@@ -220,10 +220,10 @@ namespace ExamEditor
 
         private void btnQuesEditor_Click(object sender, EventArgs e)
         {
-            Form1 questionEditorForm = new Form1();
-            this.Hide();
-            questionEditorForm.ShowDialog();
-            this.Show();
+            //Form1 questionEditorForm = new Form1();
+            //this.Hide();
+            //questionEditorForm.ShowDialog();
+            //this.Show();
         }
     }
 }
