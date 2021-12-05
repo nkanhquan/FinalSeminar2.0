@@ -111,6 +111,7 @@ namespace FinalSeminar
         {
             ImportAllTopicQuestion(@"Question Database");
             comboBox1.DataSource = lstTopic;
+            questionCtrl1.Topic.DataSource = lstTopic;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

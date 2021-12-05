@@ -16,7 +16,7 @@ namespace FinalSeminar
         private List<string> lstAns;
         private MulQuestion content;
         private List<AnswerCtrl> lstAnsCtrl = new List<AnswerCtrl>();
-       public BindingList<string> lstTopic = new BindingList<string>();
+        public BindingList<string> lstTopic = new BindingList<string>();
 
         //Properties
         public MulQuestion Content 
