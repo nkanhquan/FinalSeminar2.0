@@ -12,6 +12,8 @@ namespace ExamEditor.Exam_marker
         public string Name { get; set; }
         public string ID { get; set; }
         public int NumCorrect { get; set; }
+        public string Time { get; set; }
+        public string Code { get; set; }
 
         //Constructor
         public StudentExam()
@@ -19,6 +21,8 @@ namespace ExamEditor.Exam_marker
             Name = "";
             ID = "";
             NumCorrect = 0;
+            Time = "";
+            Code = "";
         }
 
         //Method

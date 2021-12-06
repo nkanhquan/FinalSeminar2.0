@@ -57,8 +57,18 @@ namespace ExamEditor
                     buffer = xml.ReadElementContentAsString();
                     tmpExam.ID = buffer;
 
+                    //Exam's time
+                    xml.ReadToFollowing("Time");
+                    buffer = xml.ReadElementContentAsString();
+                    tmpExam.Time = buffer;
+
                     //Student's answers
                     xml.ReadToFollowing("Test");
+
+                    //Test code
+                    xml.ReadToFollowing("TestCode");
+                    buffer = xml.ReadElementContentAsString();
+                    tmpExam.Code = buffer;
 
                     while(xml.ReadToFollowing("Question"))
                     {
@@ -143,10 +153,10 @@ namespace ExamEditor
 
             using (StreamWriter sw = File.CreateText(filePath))
             {
-                sw.WriteLine("ID|Name|Number of correct answers\n");
+                sw.WriteLine("TestCode|Time|ID|Name|Number of correct answers\n");
                 foreach(var i in lstExam)
                 {
-                    sw.WriteLine($"{i.ID}|{i.Name}|{i.NumCorrect}");
+                    sw.WriteLine($"{i.Code}|{i.Time}|{i.ID}|{i.Name}|{i.NumCorrect}");
                 }
             }
 
