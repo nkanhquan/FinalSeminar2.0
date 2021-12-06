@@ -66,6 +66,7 @@ namespace FinalSeminar_ExamBuilder_
                 string filePath = f2.path;
 
                 ImportExam(filePath);
+                txtExamCode.Text = examCode;
             }
             else //Scene 1: Customize new exam
             {
@@ -324,6 +325,10 @@ namespace FinalSeminar_ExamBuilder_
             {
                 //Read the test
                 xml.ReadToFollowing("Test");
+
+                //Read the test code
+                xml.ReadToFollowing("TestCode");
+                examCode = xml.ReadElementContentAsString();
 
                 while(xml.ReadToFollowing("Question"))
                 {
