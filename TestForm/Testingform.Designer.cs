@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TestForm.MulQuestion mulQuestion3 = new TestForm.MulQuestion();
+            TestForm.MulQuestion mulQuestion1 = new TestForm.MulQuestion();
             this.btStart = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.btBack = new System.Windows.Forms.Button();
@@ -37,9 +37,13 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.btHighlight = new System.Windows.Forms.Button();
             this.Testcodelb = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.testCtrl1 = new TestForm.TestCtrl();
             this.clockuserCtrl = new TestForm.UserControl2();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btStart
@@ -128,23 +132,74 @@
             // 
             this.Testcodelb.AutoSize = true;
             this.Testcodelb.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.Testcodelb.Location = new System.Drawing.Point(145, 209);
+            this.Testcodelb.Location = new System.Drawing.Point(139, 218);
             this.Testcodelb.Name = "Testcodelb";
             this.Testcodelb.Size = new System.Drawing.Size(155, 37);
             this.Testcodelb.TabIndex = 9;
             this.Testcodelb.Text = "TestCode";
             this.Testcodelb.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(5, 218);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 37);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Code:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label2.Location = new System.Drawing.Point(139, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(102, 37);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label3.Location = new System.Drawing.Point(142, 177);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 37);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label4.Location = new System.Drawing.Point(5, 115);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 37);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Name: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label6.Location = new System.Drawing.Point(5, 177);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 37);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "ID:";
+            // 
             // testCtrl1
             // 
             this.testCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            mulQuestion3.Ans = null;
-            mulQuestion3.CorrectAnswer = null;
-            mulQuestion3.Ques = null;
-            mulQuestion3.Topic = null;
-            this.testCtrl1.Content = mulQuestion3;
+            mulQuestion1.Ans = null;
+            mulQuestion1.CorrectAnswer = null;
+            mulQuestion1.Ques = null;
+            mulQuestion1.Topic = null;
+            this.testCtrl1.Content = mulQuestion1;
+            this.testCtrl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.testCtrl1.Location = new System.Drawing.Point(12, 258);
             this.testCtrl1.Name = "testCtrl1";
             this.testCtrl1.Question = "";
@@ -155,27 +210,21 @@
             // 
             this.clockuserCtrl._mm = 0;
             this.clockuserCtrl._ss = 0;
-            this.clockuserCtrl.Location = new System.Drawing.Point(-119, -28);
+            this.clockuserCtrl.Location = new System.Drawing.Point(-15, 9);
             this.clockuserCtrl.Margin = new System.Windows.Forms.Padding(0);
             this.clockuserCtrl.Name = "clockuserCtrl";
-            this.clockuserCtrl.Size = new System.Drawing.Size(679, 230);
+            this.clockuserCtrl.Size = new System.Drawing.Size(679, 106);
             this.clockuserCtrl.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 209);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 37);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Code:";
             // 
             // Testingform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1658, 855);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Testcodelb);
             this.Controls.Add(this.btHighlight);
@@ -191,6 +240,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Testingform_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,6 +259,10 @@
         private System.Windows.Forms.Button btHighlight;
         private System.Windows.Forms.Label Testcodelb;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
     }
 }
 

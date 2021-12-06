@@ -12,7 +12,7 @@ namespace TestForm
 
         public Status()
         {
-            st = "chua lam ";
+            st = "Unchecked ";
         }
         public override string ToString()
         {

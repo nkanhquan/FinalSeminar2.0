@@ -226,34 +226,9 @@ namespace TestForm
 
             }
         }
-        //void Answer_Reset(int index)
-        //{
-        //    for (int i = 0; i < lstAnsCtrl.Count; i++)
-        //    {
-        //        if (i != index) lstAnsCtrl[i].Answer.Checked =  false;
-        //    }
-        //}
-        //public void checkedChange()
-        //{
-        //    for(int i=0;i<lstAnsCtrl.Count;i++)
-        //    {
-        //        if (lstAnsCtrl[i].Answer.Checked==true)
-        //        {
-        //            Answer_Reset(i);
-        //            content.CorrectAnswer = lstAnsCtrl[i].Answer.Text; 
-        //            return;
-        //        }
-        //    }
-        //}
-
         private void TestCtrl_Load(object sender, EventArgs e)
         {
             Default_setting();
-        }
-
-        private void txtQuest_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

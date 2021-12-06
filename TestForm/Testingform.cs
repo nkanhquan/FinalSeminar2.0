@@ -13,19 +13,20 @@ namespace TestForm
 {
     public partial class Testingform : Form
     {
+       
         public Info stuInfo = new Info() ;
         public BindingList<MulQuestion> quesDb = new BindingList<MulQuestion>() ;
         public BindingList<Status> unCheck = new BindingList<Status>();
         public string testCode="";
         private string Timebegin="" ;
-        private int tmpIndex = 0;
+        private int tmpIndex =0;
+        private int tmpIndex1 = 0;
         private int flag = 0;
         public Testingform()
         {
             InitializeComponent();
             clockuserCtrl.uscEClock_Exit += new UserControl2.uscEClock_ExitHandle(Clock_uscEClock_Exit);
         }
-
         void Clock_uscEClock_Exit()
         {
             testCtrl1.Enabled = false;
@@ -43,34 +44,53 @@ namespace TestForm
             Testcodelb.Text = testCode;
             //
             testCtrl1.GetIndex(0);
-            testCtrl1.CreateList(quesDb.Count);  
+            testCtrl1.CreateList(quesDb.Count);
             listBox1.DataSource = quesDb;
             listBox2.DataSource = unCheck;
             testCtrl1.Enabled = true; 
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //check listbox before change 
-            testCtrl1.Changed(tmpIndex);
-            UpdateStatus(tmpIndex);
-            int index = listBox1.SelectedIndex;
-            if (index > -1)
+            //check listbox before change
+            if (flag == 1)
             {
-                listBox2.SelectedIndex = index;
-                listBox2.DataSource = null;
-                listBox2.DataSource = unCheck;
-                testCtrl1.Content = quesDb[index];
-                testCtrl1.GetIndex(index);
-                tmpIndex = index;
+                testCtrl1.Changed(tmpIndex);
+                int index = listBox1.SelectedIndex;
+                if (index > -1)
+                {
+                    listBox2.SelectedIndex = index;
+                    testCtrl1.Content = quesDb[index];
+                    testCtrl1.GetIndex(index);
+                    //Check if index may identical 
+                    if (tmpIndex != index)
+                    {
+                        flag = 0;
+                        tmpIndex = index;
+                    }
+                }
             }
+            else if (flag == 0)
+            {
+                testCtrl1.Changed(tmpIndex);
+                int index = listBox1.SelectedIndex;
+                UpdateStatus(tmpIndex);
+                if (index > -1)
+                {
+                    listBox2.SelectedIndex = index;
+                    testCtrl1.Content = quesDb[index];
+                    testCtrl1.GetIndex(index);
+                    tmpIndex = index;    
+                }
+            }
+           
+
         }
     
         private void Form1_Load(object sender, EventArgs e)
         {
-           
             testCtrl1.Enabled = false;
-            
-           
+            label2.Text = stuInfo.Name;
+            label3.Text = stuInfo.ID;
            
         }
 
@@ -79,45 +99,27 @@ namespace TestForm
             int index = listBox1.SelectedIndex;
             if (listBox1.SelectedIndex > -1)
             {
-
-                quesDb[index].CorrectAnswer=testCtrl1.Check();
-                testCtrl1.Changed(index);
-                //UpdateStatus(index);
-                //listBox2.DataSource = null;
-                //listBox2.DataSource = unCheck;
                 if (listBox1.SelectedIndex == listBox1.Items.Count - 1)
                 {                   
                     MessageBox.Show("Out of question ");
                     return;
                 }
-                listBox1.SelectedIndex = listBox1.SelectedIndex + 1;
-                testCtrl1.GetIndex(listBox1.SelectedIndex);
-                testCtrl1.Content = quesDb[listBox1.SelectedIndex];
+                listBox1.SelectedIndex = listBox1.SelectedIndex + 1;       
             }
         }
-
         private void btBack_Click(object sender, EventArgs e)
         {
           
             int index = listBox1.SelectedIndex;
             if (listBox1.SelectedIndex > -1)
             {
-
-                quesDb[index].CorrectAnswer = testCtrl1.Check();
-                testCtrl1.Changed(index);
-                //UpdateStatus(index);
-                //listBox2.DataSource = null;
-                //listBox2.DataSource = unCheck;
                 if (listBox1.SelectedIndex == 0)
                 {
                     MessageBox.Show("Out of question ");
                     return;
                 }
                 listBox1.SelectedIndex = listBox1.SelectedIndex - 1;
-                testCtrl1.GetIndex(listBox1.SelectedIndex);
-                testCtrl1.Content = quesDb[listBox1.SelectedIndex];
             }
-
         }
         private void Output()
         {
@@ -177,34 +179,56 @@ namespace TestForm
         }
         void UpdateStatus(int index )
         {
-           if(flag==1)
+            if (tmpIndex1 == 1)
             {
-                flag = 0;
+                tmpIndex1 = 0;
                 return;
             }
-            if (testCtrl1.Check() == "")
-                unCheck[index].st = "chua lam ";
-            else unCheck[index].st = "da lam";
-
+            else
+            {
+                if (testCtrl1.Check() == "")
+                    unCheck[index].st = "Unchecked ";
+                else unCheck[index].st = "Checked";
+                listBox2.DataSource = null;
+                listBox2.DataSource = unCheck;
+            }
         }
+
         private void btSubmit_Click(object sender, EventArgs e)
         {
-            Output();
-            MessageBox.Show("Submit Success");
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Do you want to submit","Submit", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Output();
+                MessageBox.Show("Submit Success");
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+            
+           
         }
  
 
         private void btHighlight_Click(object sender, EventArgs e)
         {
             flag = 1;
+            tmpIndex1 = 1;
             int index = listBox1.SelectedIndex;
-            unCheck[index].st = "special";
+            unCheck[index].st = "SPECIAL";
+            listBox2.SelectedItem = "SPECTIAL";
             listBox2.DataSource = null;
             listBox2.DataSource = unCheck;
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Testingform_FormClosing(object sender, FormClosingEventArgs e)
         {
 
         }

@@ -13,7 +13,7 @@ namespace TestForm
 {
     public partial class Form2 : Form
     {
-        Testingform f2 = new Testingform();
+       public  Testingform f2 = new Testingform();
         public Form2()
         {
             InitializeComponent();
@@ -21,13 +21,12 @@ namespace TestForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            f2.ShowDialog();
-            this.Close();
             //get info student to form 1 
             f2.stuInfo.Name = textBox1.Text;
             f2.stuInfo.ID = textBox2.Text;
-
+            this.Hide();
+            f2.ShowDialog();
+            this.Close();
         }
 
 
@@ -48,10 +47,11 @@ namespace TestForm
                     //Read the topic and its name
                     xml.ReadToFollowing("Test");
                     //read testcode
-                    //xml.ReadToFollowing("TestCode");
-                    //string tmpCode="";
-                    //tmpCode = xml.ReadElementContentAsString();
-                    //f2.testCode = tmpCode;
+                    xml.ReadToFollowing("TestCode");
+                    string tmpCode = "";
+                    tmpCode = xml.ReadElementContentAsString();
+                    f2.testCode = tmpCode;
+
                     while (xml.ReadToFollowing("Question"))
                     {
                         MulQuestion tmpQues = new MulQuestion();

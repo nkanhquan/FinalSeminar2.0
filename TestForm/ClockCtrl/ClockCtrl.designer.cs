@@ -79,97 +79,97 @@
             // 
             // mm1
             // 
-            this.mm1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.mm1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mm1.Location = new System.Drawing.Point(152, 83);
+            this.mm1.Location = new System.Drawing.Point(20, 15);
             this.mm1.Margin = new System.Windows.Forms.Padding(5);
             this.mm1.Name = "mm1";
-            this.mm1.Size = new System.Drawing.Size(28, 32);
+            this.mm1.Size = new System.Drawing.Size(29, 32);
             this.mm1.TabIndex = 0;
             this.mm1.TabStop = false;
             // 
             // mm2
             // 
-            this.mm2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.mm2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mm2.Location = new System.Drawing.Point(190, 83);
+            this.mm2.Location = new System.Drawing.Point(58, 15);
             this.mm2.Margin = new System.Windows.Forms.Padding(5);
             this.mm2.Name = "mm2";
-            this.mm2.Size = new System.Drawing.Size(28, 32);
+            this.mm2.Size = new System.Drawing.Size(29, 32);
             this.mm2.TabIndex = 0;
             this.mm2.TabStop = false;
             // 
             // line1
             // 
-            this.line1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.line1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.line1.Location = new System.Drawing.Point(228, 83);
+            this.line1.Location = new System.Drawing.Point(96, 15);
             this.line1.Margin = new System.Windows.Forms.Padding(5);
             this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(28, 32);
+            this.line1.Size = new System.Drawing.Size(29, 32);
             this.line1.TabIndex = 0;
             this.line1.TabStop = false;
             // 
             // ss1
             // 
-            this.ss1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.ss1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ss1.Location = new System.Drawing.Point(266, 83);
+            this.ss1.Location = new System.Drawing.Point(134, 15);
             this.ss1.Margin = new System.Windows.Forms.Padding(5);
             this.ss1.Name = "ss1";
-            this.ss1.Size = new System.Drawing.Size(28, 32);
+            this.ss1.Size = new System.Drawing.Size(29, 32);
             this.ss1.TabIndex = 0;
             this.ss1.TabStop = false;
             // 
             // ss2
             // 
-            this.ss2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.ss2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ss2.Location = new System.Drawing.Point(304, 83);
+            this.ss2.Location = new System.Drawing.Point(172, 15);
             this.ss2.Margin = new System.Windows.Forms.Padding(5);
             this.ss2.Name = "ss2";
-            this.ss2.Size = new System.Drawing.Size(28, 32);
+            this.ss2.Size = new System.Drawing.Size(29, 32);
             this.ss2.TabIndex = 0;
             this.ss2.TabStop = false;
             // 
             // line2
             // 
-            this.line2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.line2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.line2.Location = new System.Drawing.Point(342, 83);
+            this.line2.Location = new System.Drawing.Point(210, 15);
             this.line2.Margin = new System.Windows.Forms.Padding(5);
             this.line2.Name = "line2";
-            this.line2.Size = new System.Drawing.Size(28, 32);
+            this.line2.Size = new System.Drawing.Size(29, 32);
             this.line2.TabIndex = 0;
             this.line2.TabStop = false;
             // 
             // ms1
             // 
-            this.ms1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.ms1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ms1.Location = new System.Drawing.Point(380, 83);
+            this.ms1.Location = new System.Drawing.Point(248, 15);
             this.ms1.Margin = new System.Windows.Forms.Padding(5);
             this.ms1.Name = "ms1";
-            this.ms1.Size = new System.Drawing.Size(28, 32);
+            this.ms1.Size = new System.Drawing.Size(29, 32);
             this.ms1.TabIndex = 0;
             this.ms1.TabStop = false;
             // 
             // ms2
             // 
-            this.ms2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.ms2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ms2.Location = new System.Drawing.Point(418, 83);
+            this.ms2.Location = new System.Drawing.Point(286, 15);
             this.ms2.Margin = new System.Windows.Forms.Padding(5);
             this.ms2.Name = "ms2";
-            this.ms2.Size = new System.Drawing.Size(28, 32);
+            this.ms2.Size = new System.Drawing.Size(29, 32);
             this.ms2.TabIndex = 0;
             this.ms2.TabStop = false;
             this.ms2.Click += new System.EventHandler(this.ms2_Click);
@@ -188,7 +188,7 @@
             this.Controls.Add(this.mm1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(669, 224);
+            this.Size = new System.Drawing.Size(393, 82);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mm1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mm2)).EndInit();
