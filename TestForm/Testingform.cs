@@ -30,7 +30,7 @@ namespace TestForm
         void Clock_uscEClock_Exit()
         {
             testCtrl1.Enabled = false;
-        }
+        } 
 
         private void btStart_Click(object sender, EventArgs e)
         {
@@ -54,6 +54,7 @@ namespace TestForm
             //check listbox before change
             if (flag == 1)
             {
+                quesDb[tmpIndex].CorrectAnswer = testCtrl1.Check();
                 testCtrl1.Changed(tmpIndex);
                 int index = listBox1.SelectedIndex;
                 if (index > -1)
@@ -71,6 +72,7 @@ namespace TestForm
             }
             else if (flag == 0)
             {
+                quesDb[tmpIndex].CorrectAnswer = testCtrl1.Check();
                 testCtrl1.Changed(tmpIndex);
                 int index = listBox1.SelectedIndex;
                 UpdateStatus(tmpIndex);
@@ -196,6 +198,8 @@ namespace TestForm
 
         private void btSubmit_Click(object sender, EventArgs e)
         {
+            int index = listBox1.SelectedIndex;
+            quesDb[index].CorrectAnswer = testCtrl1.Check();
             DialogResult dialogResult = MessageBox.Show("Do you want to submit","Submit", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
