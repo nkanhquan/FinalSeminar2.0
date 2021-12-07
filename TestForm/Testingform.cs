@@ -254,5 +254,11 @@ namespace TestForm
                 }
             }
         }
+
+        private void Testingform_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Output();
+            MessageBox.Show("Submit Success");
+        }
     }
 }

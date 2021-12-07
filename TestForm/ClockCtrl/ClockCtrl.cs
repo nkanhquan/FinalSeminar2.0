@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace TestForm
 {
-    //source from Nguyen Minh Huy 
+    //source from Nguyen Duc Huy 
     public partial class UserControl2 : UserControl
     {
         
