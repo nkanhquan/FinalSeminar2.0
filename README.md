@@ -2,6 +2,7 @@
 ## Exam Creator and Exam Taker
 
 **This project was done by:**
+
 * Nguyễn Khắc Anh Quân (2059035)
 * Nguyễn Quốc Thư (2059044)
 
@@ -24,7 +25,7 @@ The starting screen will have 3 buttons for user to choose, similar to the other
 <img src="FinalSeminarVisualExample/QuestionEditorScreen.png" alt="Question editor" title="Question editor" style="zoom:60%;" />  
 After choosing question editor option, it will lead you to the program designed for creating, editing question and save those question into a Question database. 
 
-**Special features in this part:** Ability to have as many answers per question as needed
+**Special features:** Ability to have as many answers per question as needed
 
 <img src="FinalSeminarVisualExample/AnswerAbility1.png" alt="AnswerAbility1" style="zoom:55%;" />
 
@@ -41,20 +42,44 @@ After choosing question editor option, it will lead you to the program designed 
 <img src="FinalSeminarVisualExample/ExamEditorScreen.png" alt="Exam editor 2" title="Exam editor" style="zoom:60%;" />
 
 As for the exam editor button, pressing the button will lead you to a program developed for creating, editing exam for later use. 
-There are 3 special features when using this exam editor:
+There are 3 ways for you to create or open an exam:
 
-* Custom: you will start with a blank exam and work your way up from there.
+* Custom: you will start with a blank exam to customize it the way you want
+* Randomize: you will be asked for a number of question. After entering the number, the program will randomly pick questions from the database and import it into the exam. Despite that, you can still customize the exam again by yourself
+* Open an existed exam: you had made an exam and you want to modify it, this is the option for that.
 
-* Randomize: you will be asked for a number of question. After entering the number, the program will randomly pick questions from the database and import it into the exam.
+**Special feature**: Ability to change the order of the questions through 2 buttons: Up arrow and Down arrow
 
-* Open an existed exam: when you made an exam and you want to modify it, this is the option for that.
-  <br/>
+<img src="FinalSeminarVisualExample/QuestionOrderExample.png" alt="Example1" style="zoom:65%;" />
 
-  <br/>
+<img src="FinalSeminarVisualExample/QuestionOrderExample2.png" alt="Example2" style="zoom:65%;" />
+
+**The up arrow:** allows you to move the question up to the afore index.
+
+**The down arrow:** allows you to move the question down the after index.
+
+
 
 #### Exam marker:
 
-Exam marker does not have a specific menu. When you choose this option, it will lead you straight to the Folder explorer for you to pick the folder that contains all the examinee's answers xml file. After that, it will go through every single file to mark them, temporarily save them then ask for a path to export those result into a txt file. This is an example of the file after being processed:
+Exam marker does not have a specific menu. When you choose this option, it will lead you straight to the Folder explorer where you pick the folder that contains all the examinee's answers xml files. After that, it will go through every single file to mark, temporarily save them then ask for a path to export those result into a txt file. This is an example of the file after being processed:
 
 <img src="FinalSeminarVisualExample/ExamResult.png" alt="Result.txt" title="Result" style="zoom: 60%;" />
 
+
+
+## Exam taker
+
+This program is made for examinee to take the pre-made exam. When opening it, it will lead you to an open file dialog filtered to .xml file only. You pick the exam file, enter your information and begin your test. When you are finished or time is up, you can submit your answers and it will export another xml file for the previous mentioned exam marker to check. It contains only 1 main menu with all the features in it
+
+<img src="FinalSeminarVisualExample/TestModuleScreen.png" alt="ExamTaker" style="zoom:50%;" />
+
+**Special feature:**
+
+* Ability to see whether that question is checked or not
+
+  <img src="FinalSeminarVisualExample/QuestionStatus1.png" alt="QuesStatus1" style="zoom:65%;" />
+
+* Ability to highlight a question that you want to come back later
+
+  <img src="FinalSeminarVisualExample/QuestionStatus2.png" alt="QuesStatus2" style="zoom:65%;" />
