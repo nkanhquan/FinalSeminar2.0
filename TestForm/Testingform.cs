@@ -195,11 +195,11 @@ namespace TestForm
                 listBox2.DataSource = unCheck;
             }
         }
-
         private void btSubmit_Click(object sender, EventArgs e)
         {
+           
             int index = listBox1.SelectedIndex;
-            quesDb[index].CorrectAnswer = testCtrl1.Check();
+            if(index > -1)  quesDb[index].CorrectAnswer = testCtrl1.Check();
             DialogResult dialogResult = MessageBox.Show("Do you want to submit","Submit", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
@@ -211,11 +211,7 @@ namespace TestForm
             {
                 return;
             }
-            
-           
         }
- 
-
         private void btHighlight_Click(object sender, EventArgs e)
         {
             flag = 1;
@@ -226,15 +222,37 @@ namespace TestForm
             listBox2.DataSource = null;
             listBox2.DataSource = unCheck;
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void listBox1_KeyUp(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void Testingform_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
+            if(e.KeyCode==Keys.Up)
+            {
+                int index = listBox1.SelectedIndex;
+                if (listBox1.SelectedIndex > -1)
+                {
+                    if (listBox1.SelectedIndex == 0)
+                    {
+                        MessageBox.Show("Out of question ");
+                        return;
+                    }
+                    listBox1.SelectedIndex = listBox1.SelectedIndex - 1;
+                }
+            }
+            else if(e.KeyCode==Keys.Down)
+            {
+                int index = listBox1.SelectedIndex;
+                if (listBox1.SelectedIndex > -1)
+                {
+                    if (listBox1.SelectedIndex > -1)
+                    {
+                        if (listBox1.SelectedIndex == listBox1.Items.Count - 1)
+                        {
+                            MessageBox.Show("Out of question ");
+                            return;
+                        }
+                        listBox1.SelectedIndex = listBox1.SelectedIndex + 1;
+                    }
+                }
+            }
         }
     }
 }

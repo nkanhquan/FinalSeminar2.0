@@ -61,13 +61,15 @@
             // 
             this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
+            this.listBox1.ItemHeight = 25;
             this.listBox1.Location = new System.Drawing.Point(726, 251);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(744, 584);
+            this.listBox1.Size = new System.Drawing.Size(744, 579);
             this.listBox1.TabIndex = 4;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyUp);
             // 
             // btBack
             // 
@@ -109,11 +111,12 @@
             // 
             this.listBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
+            this.listBox2.ItemHeight = 25;
             this.listBox2.Location = new System.Drawing.Point(1506, 251);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(140, 584);
+            this.listBox2.Size = new System.Drawing.Size(140, 579);
             this.listBox2.TabIndex = 6;
             this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -137,7 +140,6 @@
             this.Testcodelb.Size = new System.Drawing.Size(155, 37);
             this.Testcodelb.TabIndex = 9;
             this.Testcodelb.Text = "TestCode";
-            this.Testcodelb.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
@@ -191,9 +193,8 @@
             // 
             // testCtrl1
             // 
-            this.testCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.testCtrl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             mulQuestion1.Ans = null;
             mulQuestion1.CorrectAnswer = null;
             mulQuestion1.Ques = null;
@@ -203,7 +204,7 @@
             this.testCtrl1.Location = new System.Drawing.Point(12, 258);
             this.testCtrl1.Name = "testCtrl1";
             this.testCtrl1.Question = "";
-            this.testCtrl1.Size = new System.Drawing.Size(697, 577);
+            this.testCtrl1.Size = new System.Drawing.Size(1134, 577);
             this.testCtrl1.TabIndex = 3;
             // 
             // clockuserCtrl
@@ -238,9 +239,8 @@
             this.Controls.Add(this.btStart);
             this.Name = "Testingform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Test";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Testingform_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

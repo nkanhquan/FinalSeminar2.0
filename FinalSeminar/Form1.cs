@@ -109,7 +109,7 @@ namespace FinalSeminar
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            ImportAllTopicQuestion(@"Question Database");
+            ImportAllTopicQuestion(@"QuestionDatabase");
             comboBox1.DataSource = lstTopic;
             questionCtrl1.Topic.DataSource = lstTopic;
         }
@@ -194,8 +194,9 @@ namespace FinalSeminar
                 //change questiondb when you change topic question 
                 quesDb[topicName].RemoveAt(index);
                 quesDb[tmpTopic].Add(questionCtrl1.Content);
-                listBox1.DataSource = null;
-                listBox1.DataSource = quesDb[topicName];
+                comboBox1.SelectedItem = tmpTopic ;
+                //listBox1.DataSource = null;
+                //listBox1.DataSource = quesDb[topicName];
 
             }
             else
@@ -204,6 +205,7 @@ namespace FinalSeminar
             }
             listBox1.DataSource = null;
             listBox1.DataSource = quesDb[tmpTopic];
+            //clear the listbox 
             listBox1.SelectedIndex = -1;
             questionCtrl1.clear();
 
@@ -211,7 +213,13 @@ namespace FinalSeminar
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Output(@"Question Database");
+            Output(@"QuestionDatabase");
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            listBox1.SelectedIndex = -1;
+            questionCtrl1.clear();
         }
     }
 
