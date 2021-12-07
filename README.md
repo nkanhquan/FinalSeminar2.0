@@ -23,7 +23,9 @@ The starting screen will have 3 buttons for user to choose, similar to the other
 
 #### Question editor:  
 <img src="FinalSeminarVisualExample/QuestionEditorScreen.png" alt="Question editor" title="Question editor" style="zoom:60%;" />  
-After choosing question editor option, it will lead you to the program designed for creating, editing question and save those question into a Question database. 
+After choosing question editor option, it will lead you to the program designed for creating, editing question and saving those question into a Question database. 
+
+
 
 **Special features:** Ability to have as many answers per question as needed
 
@@ -60,11 +62,15 @@ There are 3 ways for you to create or open an exam:
 
 
 
+
+
 #### Exam marker:
 
 Exam marker does not have a specific menu. When you choose this option, it will lead you straight to the Folder explorer where you pick the folder that contains all the examinee's answers xml files. After that, it will go through every single file to mark, temporarily save them then ask for a path to export those result into a txt file. This is an example of the file after being processed:
 
-<img src="FinalSeminarVisualExample/ExamResult.png" alt="Result.txt" title="Result" style="zoom: 60%;" />
+<img src="FinalSeminarVisualExample/ExamResult.png" alt="Result.txt" title="Result" style="zoom: 50%;" />
+
+
 
 
 
